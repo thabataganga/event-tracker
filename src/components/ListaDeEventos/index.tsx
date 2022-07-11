@@ -1,5 +1,4 @@
 import React from 'react';
-import { listaDeEventosState } from '../../state/atom';
 import useListaDeEventos from '../../state/hooks/useListaDeEventos';
 import Evento from '../Evento';
 import Filtro from '../Filtro';
