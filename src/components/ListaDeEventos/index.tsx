@@ -1,4 +1,7 @@
 import React from 'react';
+import { useRecoilValue } from 'recoil';
+import { IFiltroDeEvento } from '../../interfaces/IFiltroDeEventos';
+import { filtroDeEventos } from '../../state/atom';
 import useListaDeEventos from '../../state/hooks/useListaDeEventos';
 import Evento from '../Evento';
 import Filtro from '../Filtro';
@@ -6,7 +9,16 @@ import style from './ListaDeEventos.module.scss';
 
 const ListaDeEventos: React.FC = () => {
 
-  const eventos = useListaDeEventos()
+  const todosOsEventos = useListaDeEventos()
+  const filtro = useRecoilValue<IFiltroDeEvento>(filtroDeEventos)
+
+  const eventos = todosOsEventos.filter(evento => {
+    if (!filtro.data) {
+      return true
+    }
+    const ehOMesmoDia = filtro.data.toISOString().slice(0, 10) === evento.inicio.toISOString().slice(0, 10)
+    return ehOMesmoDia
+  })
 
   return (<section>
     <Filtro />
