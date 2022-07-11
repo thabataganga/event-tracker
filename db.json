@@ -1,0 +1,32 @@
+{
+  "eventos": [
+    {
+      "descricao": "Estudar React",
+      "inicio": "2022-07-10T09:00",
+      "fim": "2022-07-10T13:00",
+      "completo": false,
+      "id": 1
+    },
+    {
+      "descricao": "Estudar Recoil",
+      "inicio": "2022-07-09T09:00",
+      "fim": "2022-07-09T11:00",
+      "completo": false,
+      "id": 2
+    },
+    {
+      "descricao": "Estudar Typescript",
+      "inicio": "2022-07-09T12:00",
+      "fim": "2022-07-09T16:00",
+      "completo": false,
+      "id": 3
+    },
+    {
+      "descricao": "Estudar Next.js",
+      "inicio": "2022-07-10T14:00",
+      "fim": "2022-07-10T16:00",
+      "completo": false,
+      "id": 4
+    }
+  ]
+}
